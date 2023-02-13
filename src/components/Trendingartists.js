@@ -6,7 +6,7 @@ function Trendingartists() {
   const [trendingArtists, setTrendingArtists] = useState([])
   useEffect(() => {
     const Tartist = async () => {
-      await fetch('https://api-beta.melobit.com/v1/artist/trending/0/4')
+      await fetch('https://melobitapi.irn.workers.dev/v1/artist/trending/0/4')
         .then(Response => Response.json())
         .then(data => {
           setTrendingArtists(data.results)
