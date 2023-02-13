@@ -8,7 +8,7 @@ function Daysongs() {
   const [daySong,setDaysong]=useState([])
   useEffect(()=>{
       const Dsong=async () =>{
-          await fetch('https://api-beta.melobit.com/v1/song/top/day/0/12')
+          await fetch('https://melobitapi.irn.workers.dev/v1/song/top/day/0/12')
            .then(Response=>Response.json())
            .then(data=>{
                setDaysong(data.results)
