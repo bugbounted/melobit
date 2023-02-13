@@ -11,7 +11,7 @@ function Details() {
 
     useEffect(() => {
         const songArtist = async () => {
-            await fetch(`https://api-beta.melobit.com/v1/song/${params.id}`)
+            await fetch(`https://melobitapi.irn.workers.dev/v1/song/${params.id}`)
                 .then(Response => Response.json())
                 .then(data => {
                     setSong(data)
