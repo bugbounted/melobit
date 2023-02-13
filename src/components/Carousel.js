@@ -8,7 +8,7 @@ function Carousel() {
     const [song,setSong]=useState([])
 useEffect(()=>{
     const Slider=async () =>{
-        await fetch('https://api-beta.melobit.com/v1/song/slider/latest')
+        await fetch('https://melobitapi.irn.workers.dev/v1/song/slider/latest')
          .then(Response=>Response.json())
          .then(data=>{
              setSong(data.results)
