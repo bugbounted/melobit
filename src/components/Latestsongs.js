@@ -6,7 +6,7 @@ function Latestsongs() {
   const [latestSong,setLatestsong]=useState([])
   useEffect(()=>{
     const Lsong=async () =>{
-      await fetch('https://api-beta.melobit.com/v1/song/new/0/12')
+      await fetch('https://melobitapi.irn.workers.dev/v1/song/new/0/12')
         .then(Response=>Response.json())
         .then(data=>{
           setLatestsong(data.results)
