@@ -25,7 +25,7 @@ const Search=()=>{
 
  const searchHandler=async ()=>{
 
-        await fetch(`https://api-beta.melobit.com/v1/search/query/${searchInput}/0/8`)
+        await fetch(`https://melobitapi.irn.workers.dev/v1/search/query/${searchInput}/0/8`)
          .then(Response=>Response.json())
          .then(data=>{
              setsearchResult(data.results)
